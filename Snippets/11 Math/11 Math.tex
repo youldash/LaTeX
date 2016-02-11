@@ -1,0 +1,44 @@
+\documentclass[a4paper,12pt]{article}
+
+% .......................................... Preamble
+
+% Use \usepackage[fleqn]{amsmath} to make the math environments left-aligned instead of centered
+\usepackage[fleqn]{amsmath}
+
+% .......................................... End
+
+\begin{document}
+
+	\section*{Maths}
+	This is $x^2 =\frac{1}{4}$ in inline mode.
+	Here it is in display mode:
+	\begin{displaymath}
+		x^2 = \frac{1}{4}
+	\end{displaymath}
+	
+	\section*{More maths}
+	Fraction: $\frac{dy}{dx} = \dfrac{dy}{dx}$ \newline
+	Sum: $\sum_{n=1}^{\infty} = \displaystyle\sum_{n=1}^{\infty}$ \newline
+	Limit: $\lim_{n \to \infty} = \displaystyle\lim_{n \to \infty}$ \newline
+	Integral: $\int_a^b = \displaystyle\int_a^b$
+	
+	\section*{Matrices}
+	\begin{displaymath}
+		A = \begin{pmatrix} 1 & 2 \\ 3 & 4 \end{pmatrix},~
+		B = \begin{bmatrix} 5 & 6 \\ 7 & 8 \end{bmatrix},~
+		|A| = \begin{vmatrix} 1 & 2 \\ 3 & 4 \end{vmatrix}
+	\end{displaymath}
+	
+	\section*{More frightening equations}
+	\begin{align*}
+		f(x) &= e^{x-1}\\
+		\int_1^2 f(x)\;dx &= e^{x-1} ~\Bigr|_1^2\\
+		&= e - 1
+	\end{align*}
+	
+	\begin{align}
+		2x - 4y - 7z + 8w &= \pi\\
+		3x + 5y + 9z &= 213
+	\end{align}
+	
+\end{document}

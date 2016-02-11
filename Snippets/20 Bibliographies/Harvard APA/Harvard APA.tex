@@ -1,0 +1,193 @@
+%
+%  Bibliography using Harvard APA
+%
+%  Created by Mustafa Youldash on 2014-04-25.
+%  Copyright (c) 2014 Mustafa YOULDASH. All rights reserved.
+%
+\documentclass[12pt,a4paper,oneside]{report}
+% Alternative Options:
+%	Paper Size: a4paper / a5paper / b5paper / letterpaper / legalpaper / executivepaper
+% Duplex: oneside / twoside
+% Base Font Size: 10pt / 11pt / 12pt
+
+% .......................................... Preamble
+
+%% Package for hyper referencing
+% \usepackage{hyperref}
+
+%% Packages for graphics and figures
+\usepackage{graphicx} %%For loading graphic files
+%\usepackage{subfig} %%Subfigures inside a figure
+%\usepackage{tikz} %%Generate vector graphics from within LaTeX
+
+%% The bibliography
+%% ==> You need a file 'literature.bib' for this.
+%% ==> You need to run BibTeX for this (Project | Properties... | Uses BibTeX)
+% Citation and References macros for biblatex [APA biblatex style]
+\usepackage[american]{babel}
+% Required for language-specific quotation marks.
+\usepackage{csquotes}
+\usepackage{shortvrb}
+\usepackage{ifthen}
+% Using the 'authoryear' style in this example. Default is the 'numerical' style.
+\usepackage[backend=biber,style=apa,apabackref=true]{biblatex}
+\DeclareLanguageMapping{american}{american-apa}
+\usepackage{xpatch}
+\xpatchnameformat{labelname}{\ifciteseen}{\ifnumcomp{\value{listtotal}}{>}{\value{maxnames}}}{}{}
+% \usepackage[style=authoryear]{biblatex}
+% Using the database biblatex-examples.bib.
+\addbibresource{Literature}
+\usepackage{nameref}
+
+%% Please note:
+%% Images can be included using \includegraphics{filename}
+%% resp. using the dialog in the Insert menu.
+%% 
+%% The mode "LaTeX => PDF" allows the following formats:
+%%   .jpg  .png  .pdf  .mps
+%% 
+%% The modes "LaTeX => DVI", "LaTeX => PS" und "LaTeX => PS => PDF"
+%% allow the following formats:
+%%   .eps  .ps  .bmp  .pict  .pntg
+
+%% Math packages
+% \usepackage{amsmath}
+% \usepackage{amsthm}
+% \usepackage{amsfonts}
+
+%% Line spacing
+%\usepackage{setspace}
+%\singlespacing        %% 1-spacing (default)
+%\onehalfspacing       %% 1,5-spacing
+%\doublespacing        %% 2-spacing
+
+% .......................................... End
+
+\begin{document}
+
+	\pagestyle{empty} % No headings for the first pages.
+
+	%% Title Page %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%% ==> Write your text here or include other files.
+
+	%% The simple version:
+	\title{Bibliographies with \LaTeX}
+	\author{M. Youldash}
+	\date{\today}
+	\maketitle
+
+	\tableofcontents %Table of contents
+	\cleardoublepage %The first chapter should start on an odd page.
+
+	\pagestyle{plain}
+
+	%% Chapters %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\chapter{Introduction}
+	\label{cha:introduction}
+
+
+
+	\section{Harvard}
+	\label{sec:harvard}
+	Investigate the Harvard referencing package
+	(\verb#\usepackage{harvard}#).
+
+
+
+	\section{References}
+	\label{sec:references}
+
+	Using the commands \verb#\label{name}# and \verb#\ref{name}# you are able
+	to use references in your document. Advantage: You do not need to think
+	about numerations, because \LaTeX\ is doing that for you.
+
+	For example, in section~\ref{sec:dividing} on
+	age~\pageref{sec:dividing} hints for
+	dividing large documents are given.
+
+	Certainly, references do also work for tables, figures, formulas\ldots
+
+	Please notice, that \LaTeX\ usually needs more than one run (mostly 2) to
+	resolve those references correctly.
+
+	Instead of WYSIWYG editors, typesetting systems like TeX or
+	%LaTeX \cite{lamport94} can be used.
+
+	% Or to be more specific: \cite[p. 215]{lamport94}.
+
+	% \cite{lamport95} showed in 1995 something\ldots  \nocite{lamport95}.
+
+
+
+	\section{BibTeX}
+	\label{sec:BibTeX}
+
+	\textcite{AbedonHymanThomas2003}
+
+	\citeauthor{goossens93} noted an important thing about \ldots, \parencite{greenwade93}.
+
+
+
+	\section{Dividing Large Documents}
+	\label{sec:dividing}
+
+	You can divide your \LaTeX-Document into an arbitrary number of \TeX-Files
+	to avoid too big and therefore unhandy files (e.g. one file for every chapter).
+
+
+
+	\section{Other}
+	\label{sec:Other}
+
+	\emph{http://scholar.google.com}
+
+	%% <== End of Introduction
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%% BIBLIOGRAPHY AND OTHER LISTS
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%% A small distance to the other stuff in the table of contents (toc)
+	\addtocontents{toc}{\protect\vspace*{\baselineskip}}
+
+	%%
+	%% Embed system
+	%%
+	%\begin{thebibliography}{9}
+	% 
+	%\bibitem{myCite2009}
+	%	Mohammed Saeed,
+	%	\textit{A good book on LaTeX},
+	%	RMIT University Piblishers,
+	%	1st Edition,
+	%	2009.
+	%	
+	%\bibitem{lamport94}
+	%  Leslie Lamport,
+	%  \emph{\LaTeX: A Document Preparation System}.
+	%  Addison Wesley, Massachusetts,
+	%  2nd Edition,
+	%  1994.
+	% 
+	%\end{thebibliography}
+
+
+	%% The List of Figures
+	\clearpage
+	\addcontentsline{toc}{chapter}{List of Figures}
+	\listoffigures
+
+	%% The List of Tables
+	\clearpage
+	\addcontentsline{toc}{chapter}{List of Tables}
+	\listoftables
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%% APPENDICES
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\appendix
+
+	% The list of references is printed by way of \printbibliography.
+	\printbibliography[title=References]
+
+\end{document}

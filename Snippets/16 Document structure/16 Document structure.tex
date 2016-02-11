@@ -1,0 +1,50 @@
+%
+%  Document Structures
+%
+%  Created by Mustafa Youldash on 2014-04-25.
+%  Copyright (c) 2014 Mustafa YOULDASH. All rights reserved.
+%
+\documentclass[12pt,oneside,onecolumn,a4paper,final]{article}
+
+% .......................................... Preamble
+
+% Use utf-8 encoding for foreign characters
+\usepackage[utf8]{inputenc}
+
+% Colors
+\usepackage{xcolor}
+
+% .......................................... End
+
+\begin{document}
+
+	% .......................................... Top Matter
+	\title{Document Structures}
+	\author{Mustafa M. Youldash \\
+		Department of Computer and Information Systems \\
+		Umm Al-Qura University \\
+		\texttt{mmyouldash@uqu.edu.sa} \\
+		(+61) 432-109-876 $\;$ (+61) 3 9876-5432}
+	\date{\today}
+	\maketitle
+	% .......................................... End
+
+	% .......................................... Abstract
+	\begin{abstract}
+		The main point of writing a text is to \textcolor{red}{convey ideas}, information, or knowledge to the reader. The reader will understand the text better if these ideas are well-structured, and will see and feel this structure much better if the typographical form reflects the logical and semantic structure of the content.
+	\end{abstract}
+	% .......................................... End
+
+	\section{The document environment}
+	After the Document Class Declaration, the text of your document is enclosed between two commands which identify the beginning and end of the actual document \ldots
+
+	\section{Preamble}
+	The \texttt{preamble} is everything from the start of the Latex source file until the \\begin{document} command. It normally contains commands that affect the entire document.
+
+	\section{Conclusion}
+	\LaTeX\ is different from other typesetting systems in that you just have to tell it the logical and semantical structure of a text. It then derives the typographical form of the text according to the ``rules'' given in the document class file and in various style files. \LaTeX\ allows users to structure their documents with a variety of hierarchal constructs, including chapters, sections, subsections and paragraphs.
+
+	\appendix
+	\section{First Appendix}
+
+\end{document}

@@ -1,0 +1,51 @@
+%
+%  Document Classes
+%
+%  Created by Mustafa Youldash on 2014-04-25.
+%  Copyright (c) 2014 Mustafa YOULDASH. All rights reserved.
+%
+\documentclass[12pt,oneside,onecolumn,a4paper]{report}
+
+% .......................................... Preamble
+
+% Colors
+\usepackage[svgnames]{xcolor}
+
+% Surround parts of graphics with box
+%\usepackage{boxedminipage}
+
+% This is now the recommended way for checking for PDFLaTeX:
+%\usepackage{ifpdf}
+
+%\ifpdf
+%\usepackage[pdftex]{graphicx}
+%\else
+%\usepackage{graphicx}
+%\fi
+
+% .......................................... End
+
+\title{Your First Report}
+\author{Foo}
+
+\date{\today} % 2009-10-13
+
+\begin{document}
+
+	% Print a title paage
+	\maketitle
+
+	\begin{abstract}
+		This example shows \textbf{how} \LaTeX\ is \textcolor{HotPink}{\emph{not}} fun!
+	\end{abstract}
+
+	\section*{Introduction}
+	We begin by saying \ldots
+
+	% Input text from an external file at this exact location
+	\input{File}
+
+	\section*{Conclusion}
+	In the end, ...
+
+\end{document}

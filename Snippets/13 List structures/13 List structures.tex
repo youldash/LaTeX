@@ -1,0 +1,80 @@
+\documentclass[a4paper,12pt]{article}
+
+% .......................................... Preamble
+
+% Use utf-8 encoding for foreign characters
+\usepackage[utf8]{inputenc}
+
+% Package used for fixing LaTeX 2e
+\usepackage{fixltx2e}
+
+% Paragraph listings
+\usepackage{paralist}
+
+% .......................................... End
+
+\begin{document}
+
+	\section*{List structures}
+
+	\subsection*{Itemize}
+	\begin{itemize}
+		\item The first item
+		\item The second item
+		\item The third etc \ldots
+	\end{itemize}
+
+	\subsection*{Enumerate}
+	\begin{enumerate}
+		\item The first item
+		\item The second item
+		\item The third etc \ldots
+	\end{enumerate}
+
+	\subsection*{Descriptions}
+	\begin{description}
+		\item[First] The first item
+		\item[Second] The second item
+		\item[Third] The third etc \ldots
+	\end{description}
+
+	\begin{description}
+		\item[First] \hfill \\
+		The first item
+		\item[Second] \hfill \\
+		The second item
+		\item[Third] \hfill \\
+		The third etc \ldots
+	\end{description}
+
+	\subsection*{Nested Lists}
+	\begin{enumerate}
+		\item The first item
+	\begin{enumerate}
+		\item Nested item 1
+		\item Nested item 2
+	\end{enumerate}
+		\item The second item
+		\item The third etc \ldots
+	\end{enumerate}
+
+	\begin{itemize}
+	\setlength{\itemsep}{1pt}
+	\setlength{\parskip}{0pt}
+	\setlength{\parsep}{0pt}
+		\item first item
+		\item second item
+	\end{itemize}
+
+	\section*{Inline lists}
+	\textbf{\itshape Inline lists}, which are
+	sequential in nature, just like enumerated
+	lists, but are
+	\begin{inparaenum}[\itshape a\upshape)]
+		\item formatted within their paragraph;
+		\item usually labelled with letters; and 
+		\item usually have the final item prefixed with
+		`and' or `or',
+	\end{inparaenum} like this example.
+
+\end{document}

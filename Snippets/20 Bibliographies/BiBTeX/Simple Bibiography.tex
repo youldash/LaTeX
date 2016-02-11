@@ -1,0 +1,23 @@
+% 
+% TeX this document, then bibtex the resulting .aux file...
+% This will create .bbl and .blg files.  
+% Finally, tex this document again, twice (to get refs right).
+% 
+\documentclass[10pt,a4paper]{article}
+
+\begin{document}
+
+	\pagestyle{empty}
+	\bibliographystyle{plain} % amsplain | alpha | plain
+
+	% \nocite{*}
+
+	The simplest things we could think of in any given space are specific sites in those spaces, and the distances between them along given paths. This type of information is as old as history where humankind recorded the names of cities or other localities and the approximate travel distances or travel times between these sites. When maps were first drawn the sites needed to be located on a flat two-dimensional $(2D)$ velum, parchment or sheet of paper. In Cartesian geometry introduced much later in the \textnormal{$17^{th}$} century A.D. \cite{AF95}, every position on the flat sheet has determinable intrinsic coordinates labelled as $(x, y)$ defined relative to a selected origin and a selected pair of perpendicular axial directions in that plane.
+
+	A number of methods have been published for projecting data from higher-dimensional $(hD)$ spaces to lower-dimensional ($lD$) spaces for display purposes \cite{GS}. To do this generally, distances between sites will be distorted. For instance, the triangulation method \cite{Alu96x,BBF92} preserves $2N - 3$ distances out of the possible $\frac{N(N - 1)}{2}$ distances and tries to minimize about $N$ other distance distortions. The \emph{Map Maker} algorithm (MM) \cite{Dax} preserves all distances on the assumption that the data is $2D$, but otherwise only guarantees to preserve $2N - 3$ distances. One concern with these progressive algorithms is the cumulative error that can be generated. In this paper, we look at progressive error generation in the MM algorithm which could be regarded as a simple triangulation method always referencing only the first two points of the reordered point set. Furthermore, the errors come from the approximations used for the cosine function and for taking square roots. The errors are magnified by the scale of the distances involved. Therefore we investigate the absolute and relative errors. To obtain a global error measure for all the data, we use the \emph{root mean square error} (RMSE) value and then plot this against the data set size.
+	
+	\hfill \today 
+
+	\bibliography{References}
+
+\end{document}
