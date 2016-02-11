@@ -8,7 +8,7 @@ Welcome to the LaTeX repository! This repository is dedicated to LaTeX community
 
 * [LaTeX.pdf](https://github.com/youldash/LaTeX/tree/master/Slides/LaTeX.pdf) (webinar slides).
 * [Snippets](https://github.com/youldash/LaTeX/tree/master/Snippets/) (sample code directory).
-* [Cheatsheet](https://github.com/youldash/LaTeX/tree/master/latexsheet.pdf) (useful reference).
+* [Cheatsheet](https://github.com/youldash/LaTeX/tree/master/Misc/latexsheet.pdf) (useful reference).
 
 ## Sponsors
 This repository is sponsored in part by the [College of Computer and Information Systems](http://cis.uqu.edu.sa/) at Umm Al-Qura University, Mecca, Saudi Arabia.
