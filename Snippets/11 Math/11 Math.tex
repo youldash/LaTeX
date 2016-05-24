@@ -4,12 +4,19 @@
 
 % Use \usepackage[fleqn]{amsmath} to make the math environments left-aligned instead of centered
 \usepackage[fleqn]{amsmath}
+\usepackage{dsfont} % Used for representing Real numbers (\mathds{R})
+
+% Custom commands to define global variables/symbols in the document
+\newcommand{\vectorSpace}{\mathds{R}}
+\newcommand{\VSet}{\mathcal{V}}
+\newcommand{\PSet}{\mathcal{P}}
 
 % .......................................... End
 
 \begin{document}
 
 	\section*{Maths}
+	
 	This is $x^2 =\frac{1}{4}$ in inline mode.
 	Here it is in display mode:
 	\begin{displaymath}
@@ -17,12 +24,14 @@
 	\end{displaymath}
 	
 	\section*{More maths}
+	
 	Fraction: $\frac{dy}{dx} = \dfrac{dy}{dx}$ \newline
 	Sum: $\sum_{n=1}^{\infty} = \displaystyle\sum_{n=1}^{\infty}$ \newline
 	Limit: $\lim_{n \to \infty} = \displaystyle\lim_{n \to \infty}$ \newline
 	Integral: $\int_a^b = \displaystyle\int_a^b$
 	
 	\section*{Matrices}
+	
 	\begin{displaymath}
 		A = \begin{pmatrix} 1 & 2 \\ 3 & 4 \end{pmatrix},~
 		B = \begin{bmatrix} 5 & 6 \\ 7 & 8 \end{bmatrix},~
@@ -30,6 +39,7 @@
 	\end{displaymath}
 	
 	\section*{More frightening equations}
+	
 	\begin{align*}
 		f(x) &= e^{x-1}\\
 		\int_1^2 f(x)\;dx &= e^{x-1} ~\Bigr|_1^2\\
@@ -40,5 +50,18 @@
 		2x - 4y - 7z + 8w &= \pi\\
 		3x + 5y + 9z &= 213
 	\end{align}
+	
+	\section*{Math symbols}
+	
+	A projection defines a function $(f)$ that transforms data in $\vectorSpace^{\eta}$ to $\vectorSpace^{\kappa}$ (where $\eta \geq \kappa$)\dots\ $f$ transforms the point set $\VSet$ to another set $\PSet$ can be denoted as a mapping of a data point $(\chi)$ in $\vectorSpace^{\eta}$ to another point $(\rho)$ in $\vectorSpace^{\kappa}$ that is subject to:
+	\begin{eqnarray}
+		f_{\chi} & = & \rho \left\{
+		\begin{array}{llr}
+			\VSet = (\chi_{0}, \chi_{1}, \dots, \chi_{i}) & \forall{\chi_{i}} \in \vectorSpace^{\eta} & 0 \leq i < N \\
+			\PSet = (\rho_{0}, \rho_{1}, \dots, \rho_{j}) & \forall{\rho_{j}} \in \vectorSpace^{\kappa} & 0 \leq j < n \\
+			\eta \geq \kappa & {} & {} \\
+			N \geq n & {} & {}
+		\end{array} \right.
+	\end{eqnarray}
 	
 \end{document}
