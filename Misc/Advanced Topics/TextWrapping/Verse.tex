@@ -1,0 +1,58 @@
+\documentclass[tikz]{standalone}
+% Math
+\usepackage{amsmath}
+% Color
+\usepackage{xcolor}
+\usepackage{xecolor}
+% Fonts
+\usepackage{fontspec}
+\usepackage{xltxtra}
+\usepackage{xunicode}
+\defaultfontfeatures{Mapping=tex-text}
+\setmainfont[Ligatures=TeX]{Futura}
+% Drawing
+\usepackage{tikz,xifthen}
+\usepackage{xint}
+\usetikzlibrary{backgrounds}
+\usetikzlibrary{decorations.text}
+\usetikzlibrary{decorations.pathmorphing}
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary{decorations.pathreplacing}
+
+\begin{document}
+\begin{tikzpicture}[scale=2,cap=round,decoration={text effects along path,text={
+	And they ask you about the soul. %
+	Say: The soul is one of the commands of my Lord, %
+	and you are not given aught of knowledge but a little.},
+	text effects/.cd,
+	% repeat text,
+	character count=\m,
+	character total=\n,
+	characters={text along path,scale=1.25+\m/\n/2}}]
+	% Circles
+    \begin{pgfonlayer}{background}
+		\draw [thick,color=black,fill=cyan] (0,0) circle (2.5cm);
+		\draw [thick,color=black,fill=white] (0,0) circle (2cm);
+		\draw [thick,color=black] (0,0) circle (1.9cm);
+		\draw [thick,color=black] (0,0) circle (2.6cm);
+    \end{pgfonlayer}
+	% Header
+	\path [postaction={decorate,decoration={
+		raise=-1ex,
+		text along path,
+		reverse path,
+		text align=center,
+		text={|\large\color{white}|The Noble Qur'an}}}] (-30:2.26cm) arc (-30:210:2.26cm);
+	% \node [white,rotate=135] at (45:2.45cm) {$\blacklozenge$};
+	% \node [white,rotate=-135] at (135:2.45cm) {$\blacklozenge$};
+	% Footer
+	\path [postaction={decorate,decoration={
+		raise=-1ex,
+		text along path,
+		text align=center,
+		text={|\large\color{white}|Al-Isra - Chapter 17 Verse 85}}}] (210:2.21cm) arc (210:330:2.21cm);
+	% Decorated verse
+	\path [draw=none,postaction=decorate] (180:1.5)
+		\foreach \a in {0,...,12}{arc (180-\a*90:90-\a*90:1.5-\a/10)};
+\end{tikzpicture}
+\end{document}
