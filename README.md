@@ -12,7 +12,7 @@ Welcome to the LaTeX repository! This repository is dedicated to LaTeX community
 
 ## Sponsors
 
-This repository is sponsored in part by the [College of Computer and Information Technology](https://www.iau.edu.sa/en/colleges/college-of-computer-science-and-information-technology/) at Imam Abdulrahman Bin Faisal University, Mecca, Saudi Arabia.
+This repository is sponsored in part by the [College of Computer and Information Technology](https://www.iau.edu.sa/en/colleges/college-of-computer-science-and-information-technology/) at Imam Abdulrahman Bin Faisal University, Dammam, Saudi Arabia.
 
 ## License
 
