@@ -1,6 +1,6 @@
 # LaTeX by Example
 
-<img src="https://raw.github.com/youldash/NCCC/master/misc/UQU-LOGO-1024x731.png" width="100%" />
+<img src="https://raw.github.com/youldash/LaTeX/master/Misc/1200px-IAU.png" width="100%" />
 
 Welcome to the LaTeX repository! This repository is dedicated to LaTeX community, from beginners to experts.
 
@@ -12,7 +12,7 @@ Welcome to the LaTeX repository! This repository is dedicated to LaTeX community
 
 ## Sponsors
 
-This repository is sponsored in part by the [College of Computer and Information Systems](http://cis.uqu.edu.sa/) at Umm Al-Qura University, Mecca, Saudi Arabia.
+This repository is sponsored in part by the [College of Computer and Information Technology](https://www.iau.edu.sa/en/colleges/college-of-computer-science-and-information-technology/) at Imam Abdulrahman Bin Faisal University, Mecca, Saudi Arabia.
 
 ## License
 
