@@ -6,7 +6,7 @@ Welcome to the LaTeX repository! This repository is dedicated to LaTeX community
 
 ## Contents
 
-* [LaTeX IAU.pdf](https://github.com/youldash/LaTeX/blob/master/Slides/LaTeX%20IAU.pdf) (webinar slides).
+* [LaTeX.pdf](https://github.com/youldash/LaTeX/blob/master/Slides/LaTeX.pdf) (webinar slides).
 * [Snippets](https://github.com/youldash/LaTeX/tree/master/Snippets/) (sample code directory).
 * [Cheatsheet](https://github.com/youldash/LaTeX/tree/master/Misc/latexsheet.pdf) (useful reference).
 
